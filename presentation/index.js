@@ -55,7 +55,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+        <Deck transition={["zoom"]} transitionDuration={500}>
           <Slide transition={["slide"]}>
             <img src={images.globeit.replace("/", "")}
             style={{ height: "100%", width: "100%"}}
@@ -68,6 +68,7 @@ export default class Presentation extends React.Component {
             <Text textSize="2em" textColor="White">
               explanation of what GlobIT is
             </Text>
+            <a href="https://globeit.herokuapp.com" target="_blank">How does it work?</a>
           </Slide>
            <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
             <Heading size={2} caps fit textColor="white" textFont="primary">
@@ -77,46 +78,77 @@ export default class Presentation extends React.Component {
               Neco to help explain why this app is needed
             </Text>
           </Slide>
-          {/*<Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Slide transition={["fade"]} bgColor="black" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+            <Heading>How did we create this app?</Heading>
             <CodePane
               lang="jsx"
               source={require("raw!../assets/deck.example")}
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
+          <Slide transition={["slide"]} bgColor="black" textColor="white">
+            <Heading textColor="white">Technologies Used:</Heading>
+            <List>
+              <Appear><ListItem>React</ListItem></Appear>
+              <Appear><ListItem>Express</ListItem></Appear>
+              <Appear><ListItem>NodeJS</ListItem></Appear>
+              <Appear><ListItem>React-Router</ListItem></Appear>
+              <Appear><ListItem>Flux/Redux</ListItem></Appear>
+              <Appear><ListItem>And...</ListItem></Appear>
+              <Appear><ListItem>Many, many, hours of hard work</ListItem></Appear>
+            </List>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
+            <Heading caps fit>Special Thanks!</Heading>
             <Layout>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
+                  Parker Bond
                 </Heading>
               </Fill>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
+                  Dave Jungst
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Tasha Johnson
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  DevPoint Labs!
                 </Heading>
               </Fill>
             </Layout>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading caps fit>Team</Heading>
+            <Layout>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  John Amador
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Necoline Hubner
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Cameron Packer
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Parker Bond
+                </Heading>
+              </Fill>
+            </Layout>
+          </Slide>
+          {/*<Slide transition={["slide"]} bgColor="black">
             <BlockQuote>
               <Quote>Wonderfully formatted quotes</Quote>
               <Cite>Ken Wheeler</Cite>

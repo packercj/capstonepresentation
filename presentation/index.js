@@ -41,8 +41,12 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
-  globeit: require("../assets/GlobeIT.png")
-
+  globeit: require("../assets/GlobeIT.png"),
+  parker: require("../assets/parker.jpg"),
+  campic: require("../assets/campic.png"),
+  davejungst: require("../assets/davejungst.png"),
+  neco: require("../assets/neco.png"),
+  john: require("../assets/john.png")
 };
 
 preloader(images);
@@ -55,38 +59,67 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom"]} transitionDuration={500}>
-          <Slide transition={["slide"]}>
+        <Deck transition={[""]} transitionDuration={500}>
+        <Slide bgColor="primary">
+          <Heading caps fit>The Team</Heading>
+          <Layout>
+            <Fill>
+              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                John Amador
+              </Heading>
+              <Image img src={images.john}></Image>
+            </Fill>
+            <Fill>
+              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                Necoline Hubner
+              </Heading>
+              <Image img src={images.neco}></Image>
+            </Fill>
+            <Fill>
+              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                Cameron Packer
+              </Heading>
+              <Image img src={images.campic}></Image>
+            </Fill>
+            {/* <Fill>
+              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                Parker Bond
+              </Heading>
+              <Image img src={images.parker}></Image>
+            </Fill> */}
+          </Layout>
+        </Slide>
+          {/* <Slide transition={["zoom"]}>
             <img src={images.globeit.replace("/", "")}
             style={{ height: "100%", width: "100%"}}
             />
-          </Slide>
-          <Slide transition={["zoom"]} bgColor="primary">
+          </Slide> */}
+          <Slide transition={["slide"]} bgColor="black" notes="This is the why">
+           <Heading size={2} fit textColor="white" textFont="primary">
+             GlobeIT
+           </Heading>
+           <Text textSize="2em" textColor="White">
+             The story behind the masterpiece
+           </Text>
+         </Slide>
+          {/* <Slide transition={["spin"]} bgColor="primary">
             <Heading size={1} fit lineHeight={1} textColor="White">
               What is GlobeIT?
             </Heading>
             <Text textSize="2em" textColor="White">
               explanation of what GlobIT is
             </Text>
-            <a href="https://globeit.herokuapp.com" target="_blank">How does it work?</a>
-          </Slide>
-           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Heading size={2} caps fit textColor="white" textFont="primary">
-              Why did we create this app?
-            </Heading>
-            <Text textSize="2em" textColor="White">
-              Neco to help explain why this app is needed
-            </Text>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="black" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+            <a href="./assets/testing.mov" target="_blank">How does it work?</a>
+          </Slide> */}
+          <Slide transition={["fade"]} bgColor="black" notes="the what with video">
             <Heading>How did we create this app?</Heading>
             <CodePane
               lang="jsx"
-              source={require("raw!../assets/deck.example")}
+              source={require("raw!../assets/globeit.example")}
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" textColor="white">
+          <Slide transition={["slide"]} bgColor="black" textColor="white" notes="how... and bunch of images">
             <Heading textColor="white">Technologies Used:</Heading>
             <List>
               <Appear><ListItem>React</ListItem></Appear>
@@ -102,23 +135,40 @@ export default class Presentation extends React.Component {
             <Heading caps fit>Special Thanks!</Heading>
             <Layout>
               <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
                   Parker Bond
                 </Heading>
+                <Image img src={images.parker}></Image>
               </Fill>
               <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
                   Dave Jungst
                 </Heading>
+                {/* <Image img src={images.davejungst}></Image> */}
               </Fill>
               <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
                   Tasha Johnson
                 </Heading>
               </Fill>
               <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
                   DevPoint Labs!
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                  Chrome Expirements
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                  Zhixuan Lai - react template for webgl
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                  Vojtěch Král
                 </Heading>
               </Fill>
             </Layout>

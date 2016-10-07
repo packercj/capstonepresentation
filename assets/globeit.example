@@ -1,0 +1,34 @@
+render() {
+  let globes = this.state.globes.map( globe => {
+    return (
+        <tr key={globe._id} className="text-align center">
+          <td key={globe._id} className="text-align center"> {globe.name} </td>
+          <td className="text-align center"> {globe.category} </td>
+          <td className="text-align center">
+            <button
+              className="btn grey"
+              onClick={() => this.props.history.push(`/globeEdit/${globe._id}`)}
+              >
+                Edit
+            </button>
+          </td>
+          <td className="text-align center">
+            <button
+              className="btn grey"
+              onClick={() => this.props.history.push(`/globe/${globe._id}`)}
+            >
+                Launch Globe
+            </button>
+          </td>
+          <td className="text-align center">
+            <button
+              className="btn grey"
+              key={globe._id}
+              onClick={() => this.deleteGlobe(globe._id) }
+              >
+                Delete
+            </button>
+          </td>
+        </tr>
+    )
+  })

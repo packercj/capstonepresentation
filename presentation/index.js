@@ -19,7 +19,10 @@ import {
   Quote,
   Slide,
   Spectacle,
-  Text
+  Text,
+  Table,
+  TableRow,
+  TableItem
 } from "spectacle";
 
 // Import image preloader util
@@ -48,6 +51,9 @@ const images = {
   neco: require("../assets/neco.png"),
   john: require("../assets/john.png")
 };
+// const video = {
+//   globetest: require("../assets/globetest.m4v")
+// };
 
 preloader(images);
 
@@ -81,20 +87,9 @@ export default class Presentation extends React.Component {
               </Heading>
               <Image img src={images.campic}></Image>
             </Fill>
-            {/* <Fill>
-              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                Parker Bond
-              </Heading>
-              <Image img src={images.parker}></Image>
-            </Fill> */}
           </Layout>
         </Slide>
-          {/* <Slide transition={["zoom"]}>
-            <img src={images.globeit.replace("/", "")}
-            style={{ height: "100%", width: "100%"}}
-            />
-          </Slide> */}
-          <Slide transition={["slide"]} bgColor="black" notes="This is the why">
+          <Slide transition={["zoom"]} bgColor="black" notes="This is the why">
            <Heading size={2} fit textColor="white" textFont="primary">
              GlobeIT
            </Heading>
@@ -102,24 +97,10 @@ export default class Presentation extends React.Component {
              The story behind the masterpiece
            </Text>
          </Slide>
-          {/* <Slide transition={["spin"]} bgColor="primary">
-            <Heading size={1} fit lineHeight={1} textColor="White">
-              What is GlobeIT?
-            </Heading>
-            <Text textSize="2em" textColor="White">
-              explanation of what GlobIT is
-            </Text>
-            <a href="./assets/testing.mov" target="_blank">How does it work?</a>
-          </Slide> */}
-          <Slide transition={["fade"]} bgColor="black" notes="the what with video">
+          <Slide transition={["spin"]} bgColor="black" notes="the what with video">
             <Heading>How did we create this app?</Heading>
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/globeit.example")}
-              margin="20px auto"
-            />
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" textColor="white" notes="how... and bunch of images">
+          <Slide transition={["fade"]} bgColor="black" textColor="white" notes="how... and bunch of images">
             <Heading textColor="white">Technologies Used:</Heading>
             <List>
               <Appear><ListItem>React</ListItem></Appear>
@@ -131,47 +112,91 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Many, many, hours of hard work</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
+          <Slide transition={["zoom"]} bgColor="black" textColor="white" notes="how... and bunch of images">
+            <Heading textColor="white">Special Thanks to:</Heading>
+            <List>
+              <ListItem>Dave Jungst</ListItem>
+              <ListItem>Parker Bond</ListItem>
+              <ListItem>Tasha Johnson</ListItem>
+              <ListItem>DevPoint Labs</ListItem>
+              <ListItem>Chrome Expirements</ListItem>
+              <ListItem>Zhixuan Lai - react webgl template</ListItem>
+              <ListItem>Vojtěch Král - endo webgl template</ListItem>
+            </List>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
             <Heading caps fit>Special Thanks!</Heading>
             <Layout>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
                   Parker Bond
                 </Heading>
-                <Image img src={images.parker}></Image>
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
                   Dave Jungst
                 </Heading>
-                {/* <Image img src={images.davejungst}></Image> */}
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
                   Tasha Johnson
                 </Heading>
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
                   DevPoint Labs!
                 </Heading>
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
                   Chrome Expirements
                 </Heading>
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
-                  Zhixuan Lai - react template for webgl
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
+                  Zhixuan Lai - react webgl template
                 </Heading>
               </Fill>
               <Fill>
-                <Heading size={6} caps textColor="secondary" bgColor="white" margin={5}>
-                  Vojtěch Král
+                <Heading caps textColor="secondary" bgColor="white" margin={5}>
+                  Vojtěch Král - endo webgl template
                 </Heading>
               </Fill>
             </Layout>
+          </Slide>
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading caps fit>Special Thanks!</Heading>
+            <Table>
+              <TableRow>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  Parker Bond
+                </TableItem>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  Dave Jungst
+                </TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  Tasha Johnson
+                </TableItem>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  DevPoint Labs!
+                </TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  Chrome Expirements
+                </TableItem>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                  Zhixuan Lai - react webgl template
+                  </TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                Vojtěch Král - endo webgl template
+                </TableItem>
+              </TableRow>
+            </Table>
           </Slide>
           <Slide transition={["slide"]} bgColor="primary">
             <Heading caps fit>Team</Heading>
@@ -189,11 +214,6 @@ export default class Presentation extends React.Component {
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
                   Cameron Packer
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Parker Bond
                 </Heading>
               </Fill>
             </Layout>

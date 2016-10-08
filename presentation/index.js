@@ -112,7 +112,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Many, many, hours of hard work</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["zoom"]} bgColor="black" textColor="white" notes="how... and bunch of images">
+          {/* <Slide transition={["zoom"]} bgColor="black" textColor="white" notes="how... and bunch of images">
             <Heading textColor="white">Special Thanks to:</Heading>
             <List>
               <ListItem>Dave Jungst</ListItem>
@@ -123,8 +123,8 @@ export default class Presentation extends React.Component {
               <ListItem>Zhixuan Lai - react webgl template</ListItem>
               <ListItem>Vojtěch Král - endo webgl template</ListItem>
             </List>
-          </Slide>
-          <Slide transition={["zoom"]} bgColor="primary">
+          </Slide> */}
+          {/* <Slide transition={["zoom"]} bgColor="primary">
             <Heading caps fit>Special Thanks!</Heading>
             <Layout>
               <Fill>
@@ -163,7 +163,7 @@ export default class Presentation extends React.Component {
                 </Heading>
               </Fill>
             </Layout>
-          </Slide>
+          </Slide> */}
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading caps fit>Special Thanks!</Heading>
             <Table>
@@ -195,26 +195,32 @@ export default class Presentation extends React.Component {
                 <TableItem caps fit textColor="secondary" bgColor="white">
                 Vojtěch Král - endo webgl template
                 </TableItem>
+                <TableItem caps fit textColor="secondary" bgColor="white">
+                Data Resource - https://hourofcode.com
+                </TableItem>
               </TableRow>
             </Table>
           </Slide>
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading caps fit>Team</Heading>
+            <Heading caps fit>The Team</Heading>
             <Layout>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
                   John Amador
                 </Heading>
+                <Image img src={images.john}></Image>
               </Fill>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
                   Necoline Hubner
                 </Heading>
+                <Image img src={images.neco}></Image>
               </Fill>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
                   Cameron Packer
                 </Heading>
+                <Image img src={images.campic}></Image>
               </Fill>
             </Layout>
           </Slide>
